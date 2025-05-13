@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Finance Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Finance Tracker</h2>
+                <ul>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#transactions">Transactions</a></li>
+                    <li><a href="#reports">Reports</a></li>
+                    <li><a href="#investments">Investments</a></li>
+                </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Summary -->
+            <h1 id="dashboard">Dashboard</h1>
+            <div class="summary">
+                <div class="box">
+                    <h2>Total Income</h2>
+                    <p id="totalIncome">$0</p>
+                </div>
+                <div class="box">
+                    <h2>Total Expenses</h2>
+                    <p id="totalExpenses">$0</p>
+                </div>
+                <div class="box">
+                    <h2>Total Savings</h2>
+                    <p id="totalSavings">$0</p>
+                </div>
+            </div>
+            
+            <!-- Transaction Functionality -->
+            <h2>Add Transaction</h2>
+            <div class="form">
+                <input type="text" id="title" placeholder="Title" />
+                <input type="number" id="amount" placeholder="Amount" />
+                <select id="type">
+                    <option value="Income">Income</option>
+                    <option value="Expense">Expense</option>
+                </select>
+                <button onclick="addTransaction()">Add</button>
+            </div>
+
+            <!-- Transaction Data -->
+            <h2 id="transactions">Transactions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="transactionTable"></tbody>
+            </table>
+            
+            <!-- Investments Data -->
+            <h2 id="investments">Investments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Stocks</th>
+                        <th>Mutual Funds</th>
+                        <th>FD</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td id="stocksValue"></td>
+                    <td id="mfValue"></td>
+                    <td id="fdValue"></td>
+                </tr>
+            </table>
+            <div id="reports" class="report-section">
+            <h2>Reports</h2>
+            <button onclick="generateReport()">Generate Report</button>
+            <!-- <button onclick="downloadPDF()">Download PDF</button> -->
+            <button onclick="printReport()">Print</button>
+            <div id="reportOutput" class="report-output"></div>
+            </div>
+        </main>
+    </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script> -->
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
