@@ -11,8 +11,7 @@ A simple, responsive frontend dashboard to manage your income, expenses, and bud
 - 📁 Budget management
 - 💾 Local storage support
 - 📱 Mobile-friendly interface
-<br>
-parshva
+
 
 ---
 
